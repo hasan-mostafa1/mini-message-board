@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>Message From : <%= message.user%></title>
     <style>
         span { 
             font-weight: bold;
@@ -20,16 +20,13 @@
     </style>
 </head>
 <body>
-    <a href="./new">Add new message</a>
-    <hr>
-    <% messages.forEach((message,index)=>{ %>
-        <div class="message">
-            <ul>
-                <li><span>User:</span> <%= message.user %></li>
-                <li><span>Added:</span> <%= message.added %></li>
-            </ul>
-            <a href="/messages/<%=index%>">Open</a>
-        </div>
-    <%})%>
+
+    <div class="message">
+        <ul>
+            <li><span>User:</span><%= message.user %></li>
+            <li><span>Text:</span> <%= message.text %></li>
+            <li><span>Added:</span> <%= message.added %></li>
+        </ul>
+    </div>
 </body>
 </html>
