@@ -25,10 +25,10 @@
     <% messages.forEach((message,index)=>{ %>
         <div class="message">
             <ul>
-                <li><span>User:</span> <%= message.user %></li>
+                <li><span>User:</span> <%= message.sender %></li>
                 <li><span>Added:</span> <%= message.added %></li>
             </ul>
-            <a href="/messages/<%=index%>">Open</a>
+            <a href="/messages/<%=index+1%>">Open</a>
         </div>
     <%})%>
 </body>
